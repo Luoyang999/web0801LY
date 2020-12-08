@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      width:640px;
+      margin: 0 auto;
+      border:2px solid #900;
+    }
+    #control-buttons{
+      margin: 20px 0;
+    }
+    #control-buttons button{
+      display: inline-block;
+      line-height: 30px;
+      height: 30px;
+      background-color: #900;
+      color:#fff;
+      border:none;
+      outline: none;
+      font-size:12px;
+      font-family: 'Microsoft Yahei';
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+      <video id="video" src="resource/video/video.mp4" width="640" height="360" poster="resource/ad/0D0100005E4DDCB31126293290574D55.jpg"></video>
+      <div id="control-buttons">
+          <button onclick="a()">播放/暂停</button>
+          <button onclick="c()">增大音量</button>
+          <button onclick="d()">减少音量</button>
+      </div>
+  </div>
+  <script>
+    function a(){
+      let b=document.getElementById('video');
+      if(b.paused || b.ended){
+        b.play();
+      }else b.pause()
+    }
+    function c(){
+      let b=document.getElementById('video');
+      b.volume=Math.min(1,b.volume+0.1);
+      
+    }
+    function d(){
+      let b=document.getElementById('video');
+      b.volume=Math.max(0,b.volume);
+     
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video width="300" height="200" src="./resource/video/video.mp4" id="video"></video>
+    <script>
+        let videoEle=document.getElementById('video');
+        window.alert(videoEle.width);
+        videoEle.width=350;
+        videoEle.poster='./resource/ad/200220110644315108.jpg';
+        window.alert(videoEle.width);
+    </script>
+</body>
+</html>
